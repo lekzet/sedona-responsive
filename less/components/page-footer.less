@@ -1,0 +1,105 @@
+.page-footer {
+        position: relative;
+        height: 595px;
+        
+    &__map {
+        background-color: #ccc;
+        height: 100%;
+    }
+    
+    &__content {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        padding: 25px 0;
+        text-align: center;
+        background-color: fade(@body-bg, 90%);
+    }
+}
+
+.hashtag {
+    margin: 0;
+    margin-bottom: 35px;
+    color: @headings-color;
+    font-size: @font-size-xl;
+    line-height: @line-height-l;
+    font-weight: @font-weight-bold;
+}
+
+.social {
+    margin-bottom: 40px;
+    font-size: 0;
+    
+    &__btn {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 6px;
+        width: 46px;
+        height: 48px;
+        font-size: 0;
+        background-color: @block-bg;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: .3s;
+        
+        &:hover {
+            background-color: @btn-bg-hover;
+        }
+    }
+    
+    &__btn--tw {
+        background-image: url("../img/icon-twitter.svg");
+    }
+    
+    &__btn--fb {
+        background-image: url("../img/icon-facebook.svg");
+    }
+    
+    &__btn--ytb {
+        background-image: url("../img/icon-youtube.svg");
+    }
+}
+
+.copyright {
+    font-size: @font-size-base;
+    line-height: @line-height-l;
+    font-weight: @font-weight-base;
+    
+    &__link {
+        font-size: 0;
+        display: inline-block;
+        vertical-align: middle;
+        
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            width: 27px;
+            margin: 0 7px;
+        }
+    }
+}
+
+
+//=====================================================
+//=====================================================
+//=====================================================
+
+
+@media (min-width: 768px) {
+
+    .page-footer__content {
+        padding: 35px 0;
+        font-size: 0;
+    }
+
+    .hashtag,
+    .social,
+    .copyright {
+        display: inline-block;
+        vertical-align: middle;
+        width: 33.33%;
+        margin: 0;
+        text-align: center;
+    }
+
+}

@@ -1,0 +1,632 @@
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  color: #333333;
+  background-color: #ffffff;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.container {
+  margin: 0 auto;
+  min-width: 320px;
+}
+@media (min-width: 768px) {
+  .container {
+    min-width: 768px;
+    max-width: 1200px;
+  }
+}
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+a {
+  color: #333333;
+  text-decoration: none;
+}
+.page-header {
+  position: relative;
+}
+.main-nav__list {
+  position: absolute;
+  top: -300px;
+  right: 63px;
+  width: 60%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  background-color: #81b3d2;
+  box-shadow: inset 0 -5px 5px -5px rgba(0, 0, 0, 0.5);
+  z-index: 20;
+  opacity: 0;
+  transition: .3s;
+}
+.main-nav__list--open {
+  top: 0;
+  opacity: 1;
+}
+.main-nav__list-item {
+  border-top: 1px solid #9bc3db;
+  border-bottom: 1px solid #658ea7;
+}
+.main-nav__list-item:first-child {
+  border-top: none;
+}
+.main-nav__list-item:last-child {
+  border-bottom: none;
+}
+.main-nav__list-item a {
+  display: block;
+  padding: 7px;
+  color: #ffffff;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+  text-decoration: none;
+}
+.main-nav__list-item a:hover {
+  background-color: #6ea8cb;
+}
+.main-nav__toggle {
+  width: 63px;
+  height: 56px;
+  margin-left: auto;
+  background-image: url("../img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 22px 22px;
+  cursor: pointer;
+  transition: .2s;
+}
+.main-nav__toggle:hover {
+  opacity: .8;
+}
+.main-nav__toggle--close {
+  background-image: url("../img/icon-menu-close.svg");
+}
+.main-nav__logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -70px;
+  width: 140px;
+  height: 72px;
+  background-image: url("../img/logo-sedona@1x.png"), url("../img/form-logo-triangle.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  z-index: 10;
+}
+.main-nav__logo a {
+  display: block;
+  width: 100%;
+  line-height: 56px;
+  font-size: 0;
+}
+.page-header__logo {
+  height: 390px;
+  background-color: #ccc;
+  background-repeat: no-repeat;
+  background-image: url("../img/text-welcome.svg"), url("../img/text-tothegorgeous.svg"), url("../img/text-sedona.svg"), url("../img/text-becausecanyon.svg"), url("../img/photo-background@1x.jpg");
+  background-size: 145px,
+                                    195px,
+                                    280px,
+                                    195px,
+                                    768px 512px;
+  background-position: center 15%,
+                                     center 25%,
+                                     center 50%,
+                                     center 85%,
+                                     center top;
+}
+@media (min-width: 768px) {
+  .main-nav__list {
+    position: static;
+    display: block;
+    opacity: 1;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: none;
+  }
+  .main-nav__list-item {
+    display: inline-block;
+    width: 20%;
+    padding: 15px 0;
+    border: 0;
+  }
+  .main-nav__list-item:nth-child(2) {
+    margin-right: 20%;
+  }
+  .main-nav__list-item a {
+    display: inline;
+    padding: 0;
+    color: #000000;
+    font-size: 14px;
+    line-height: 26px;
+    transition: 0s;
+  }
+  .main-nav__list-item a:hover {
+    color: #766357;
+    background-color: transparent;
+  }
+  .main-nav__toggle {
+    display: none;
+  }
+  .page-header__logo {
+    height: 512px;
+    background-size: 190px,
+                                 255px,
+                                 460px,
+                                 295px,
+                                 100%;
+    background-position: center 13%,
+                                       center 23%,
+                                       center 50%,
+                                       center 80%,
+                                       center 30%;
+  }
+}
+.reasons__header {
+  padding: 30px;
+  text-align: center;
+}
+.reasons__title {
+  margin: 0;
+  margin-bottom: 25px;
+  color: #000000;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.reasons__subtitle {
+  margin: 0;
+  color: #333333;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.reason-card {
+  padding: 40px 25px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #81b3d2;
+}
+.reason-card__title {
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.reason-card__counter {
+  margin: 0;
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+.reason-card__subtitle {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+.reason-card--gray {
+  padding: 30px 25px;
+  color: #333333;
+  background-color: #eeeeee;
+}
+.reason-card--gray .reason-card__title {
+  color: #000000;
+}
+.reason-card--gray:not(:last-child)::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: 30px;
+  border-bottom: 1px solid #d5d5d5;
+}
+.reason__image {
+  position: relative;
+  height: 256px;
+  overflow: hidden;
+  background-color: #ccc;
+}
+.reason__image img {
+  position: absolute;
+  left: 50%;
+  margin-left: -256px;
+  width: 512px;
+  height: 256px;
+}
+.reason__image--left img {
+  position: static;
+  margin-left: 0;
+}
+.reason__descr {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.reason__guide {
+  margin-bottom: 20px;
+  padding-left: 70px;
+  padding-right: 45px;
+  background-repeat: no-repeat;
+  background-size: 38px auto;
+  background-position: 20px top;
+}
+.reason__guide--house {
+  background-image: url("../img/icon-house.svg");
+}
+.reason__guide--gift {
+  background-image: url("../img/icon-gift.svg");
+  background-size: 33px auto;
+}
+.reason__guide--burger {
+  background-image: url("../img/icon-burger.svg");
+  margin-bottom: 0;
+}
+.reason__guide h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  color: #000000;
+  font-size: 18px;
+  line-height: 40px;
+  font-weight: 700;
+}
+.reason__guide p {
+  margin: 0;
+  color: #333333;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+@media (min-width: 532px) {
+  .reason__image img {
+    position: static;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+  }
+}
+@media (min-width: 768px) {
+  .reasons__header {
+    padding: 50px 0;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .reasons__title {
+    margin-bottom: 30px;
+    font-size: 21px;
+  }
+  .reason-card {
+    float: left;
+    padding: 45px 5%;
+    width: 23.33%;
+    height: 166px;
+  }
+  .reason-card__title {
+    max-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 21px;
+  }
+  .reason-card__counter {
+    margin-bottom: 20px;
+  }
+  .reason-card--gray:not(:last-child)::after {
+    border: 0;
+  }
+  .reason__image {
+    float: right;
+    width: 66.67%;
+  }
+  .reason__image img {
+    position: static;
+    margin-left: 0;
+    width: 100%;
+    height: auto;
+  }
+  .reason-card--right {
+    float: right;
+  }
+  .reason__image--left {
+    float: left;
+  }
+  .reason__descr {
+    max-width: none;
+    padding: 55px 0;
+    min-height: 220px;
+  }
+  .reason__guide {
+    float: left;
+    width: 23.33%;
+    padding: 0 5%;
+    padding-top: 95px;
+    margin-bottom: 0;
+    text-align: center;
+    background-size: auto 75px;
+    background-position: center top;
+  }
+  .reason__guide h3 {
+    margin-bottom: 20px;
+    font-size: 21px;
+  }
+}
+@media (min-width: 1200px) {
+  .reason__image img {
+    position: absolute;
+    left: 0;
+    margin-left: 0;
+    bottom: 0;
+    margin-bottom: -70px;
+  }
+}
+.reservation__header {
+  padding: 25px;
+  text-align: center;
+}
+.reservation__title {
+  margin: 0;
+  margin-bottom: 25px;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.reservation__subtitle {
+  margin: 0;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 400;
+}
+.reservation-form__title {
+  margin: 0;
+  padding: 30px 10px;
+  color: #ffffff;
+  background-color: #766357;
+  text-align: center;
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.reservation-form__content {
+  max-width: 280px;
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 50px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #ffffff;
+}
+.reservation-form__date {
+  margin-bottom: 20px;
+}
+.reservation-form__date label {
+  display: block;
+  padding: 0 15px;
+  margin-bottom: 7px;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+.reservation-form__date input {
+  width: 225px;
+  padding: 6px 15px;
+  padding-right: 40px;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #f2f2f2;
+  font-family: inherit;
+  text-transform: inherit;
+  border: 0;
+  outline: 0;
+}
+.reservation-form__visitors {
+  margin-bottom: 45px;
+}
+.reservation-form__number {
+  float: left;
+  width: 115px;
+}
+.reservation-form__number:last-child {
+  float: right;
+}
+.reservation-form__number label {
+  display: block;
+  padding: 0 15px;
+  margin-bottom: 7px;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+}
+.reservation-form__number input {
+  width: 85px;
+  padding: 6px 15px;
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #000000;
+  background-color: #f2f2f2;
+  text-align: center;
+  font-family: inherit;
+  text-transform: inherit;
+  border: 0;
+  outline: 0;
+}
+.reservation-form__submit {
+  display: block;
+  width: 100%;
+  padding: 15px 0;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: #81b3d2;
+  text-align: center;
+  font-family: inherit;
+  text-transform: inherit;
+  border: 0;
+  outline: 0;
+  transition: .3s;
+}
+.reservation-form__submit:hover {
+  background-color: #6ea8cb;
+}
+@media (min-width: 768px) {
+  .reservation {
+    position: relative;
+  }
+  .reservation__header {
+    padding-top: 55px;
+    padding-bottom: 135px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .reservation__title {
+    margin-bottom: 30px;
+    font-size: 30px;
+  }
+  .reservation-form {
+    position: absolute;
+    top: 208px;
+    left: 50%;
+    margin-left: -285px;
+    width: 570px;
+    z-index: 10;
+  }
+  .reservation-form__title {
+    font-size: 21px;
+  }
+  .reservation-form__content {
+    max-width: none;
+    padding: 55px;
+  }
+  .reservation-form__date {
+    margin-bottom: 30px;
+    font-size: 0;
+  }
+  .reservation-form__date label {
+    display: inline-block;
+    vertical-align: baseline;
+    padding: 0;
+    width: 110px;
+  }
+  .reservation-form__date input {
+    display: inline-block;
+    vertical-align: baseline;
+    width: 295px;
+  }
+  .reservation-form__visitors {
+    margin-bottom: 50px;
+  }
+  .reservation-form__number {
+    width: 225px;
+    font-size: 0;
+  }
+  .reservation-form__number label {
+    display: inline-block;
+    vertical-align: baseline;
+    padding: 0;
+    width: 110px;
+  }
+  .reservation-form__number input {
+    display: inline-block;
+    vertical-align: baseline;
+  }
+  .reservation-form__number:last-child label {
+    text-align: center;
+  }
+}
+.page-footer {
+  position: relative;
+  height: 595px;
+}
+.page-footer__map {
+  background-color: #ccc;
+  height: 100%;
+}
+.page-footer__content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 25px 0;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.hashtag {
+  margin: 0;
+  margin-bottom: 35px;
+  color: #000000;
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+}
+.social {
+  margin-bottom: 40px;
+  font-size: 0;
+}
+.social__btn {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 6px;
+  width: 46px;
+  height: 48px;
+  font-size: 0;
+  background-color: #81b3d2;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: .3s;
+}
+.social__btn:hover {
+  background-color: #6ea8cb;
+}
+.social__btn--tw {
+  background-image: url("../img/icon-twitter.svg");
+}
+.social__btn--fb {
+  background-image: url("../img/icon-facebook.svg");
+}
+.social__btn--ytb {
+  background-image: url("../img/icon-youtube.svg");
+}
+.copyright {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.copyright__link {
+  font-size: 0;
+  display: inline-block;
+  vertical-align: middle;
+}
+.copyright__link img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
+  margin: 0 7px;
+}
+@media (min-width: 768px) {
+  .page-footer__content {
+    padding: 35px 0;
+    font-size: 0;
+  }
+  .hashtag,
+  .social,
+  .copyright {
+    display: inline-block;
+    vertical-align: middle;
+    width: 33.33%;
+    margin: 0;
+    text-align: center;
+  }
+}

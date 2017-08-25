@@ -1,0 +1,224 @@
+.reservation {
+    &__header {
+        padding: 25px;
+        text-align: center;
+    }
+    
+    &__title {
+        margin: 0;
+        margin-bottom: 25px;
+        font-size: @font-size-xl;
+        line-height: @line-height-l;
+        font-weight: @font-weight-bold;
+    }
+    
+    &__subtitle {
+        margin: 0;
+        font-size: @font-size-base;
+        line-height: @line-height-m;
+        font-weight: @font-weight-base;
+    }
+}
+
+.reservation-form {
+    &__title {
+        margin: 0;
+        padding: 30px 10px;
+        color: @text-color-reverse;
+        background-color: @form-header-bg;
+        text-align: center;
+        font-size: @font-size-l;
+        line-height: @line-height-l;
+        font-weight: @font-weight-bold;
+    }
+    
+    &__content {
+        max-width: 280px;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
+        background-color: @body-bg;
+    }
+}
+
+
+.reservation-form__date {
+    margin-bottom: 20px;
+
+    label {
+        display: block;
+        padding: 0 15px;
+        margin-bottom: 7px;
+        font-size: @font-size-base;
+        line-height: @line-height-l;
+        font-weight: @font-weight-bold;
+        color: @headings-color;
+    }
+
+    input {
+        //display: block;
+        width: 225px;
+        padding: 6px 15px;
+        padding-right: 40px;
+        font-size: @font-size-base;
+        line-height: @line-height-l;
+        font-weight: @font-weight-bold;
+        color: @headings-color;
+        background-color: @form-input-bg;
+        font-family: inherit;
+        text-transform: inherit;
+        border: 0;
+        outline: 0;
+    }
+}
+
+.reservation-form__visitors {
+    margin-bottom: 45px;
+}
+
+.reservation-form__number {
+    float: left;
+    width: 115px;
+    
+    &:last-child {
+        float: right;
+    }
+    
+    label {
+        display: block;
+        padding: 0 15px;
+        margin-bottom: 7px;
+        font-size: @font-size-base;
+        line-height: @line-height-l;
+        font-weight: @font-weight-bold;
+        color: @headings-color;
+    }
+    
+    input {
+        //display: block;
+        width: 85px;
+        padding: 6px 15px;
+        font-size: @font-size-base;
+        line-height: @line-height-l;
+        font-weight: @font-weight-bold;
+        color: @headings-color;
+        background-color: @form-input-bg;
+        text-align: center;
+        font-family: inherit;
+        text-transform: inherit;
+        border: 0;
+        outline: 0;
+    }
+}
+
+.reservation-form__submit {
+    display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: @font-size-xl;
+    line-height: @line-height-l;
+    font-weight: @font-weight-bold;
+    color: @text-color-reverse;
+    background-color: @block-bg;
+    text-align: center;
+    font-family: inherit;
+    text-transform: inherit;
+    border: 0;
+    outline: 0;
+    transition: .3s;
+    
+    &:hover {
+        background-color: @btn-bg-hover;
+    }
+}
+
+
+//=====================================================
+//=====================================================
+//=====================================================
+
+
+@media (min-width: 768px) {
+
+    .reservation {
+        position: relative;
+        
+        &__header {
+            padding-top: 55px;
+            padding-bottom: 135px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        &__title {
+            margin-bottom: 30px;
+            font-size: @font-size-xxl;
+        }
+    }
+
+    .reservation-form {
+        position: absolute;
+        top: 208px;
+        left: 50%;
+        margin-left: -285px;
+        width: 570px;
+        z-index: 10;
+        
+        &__title {
+            font-size: @font-size-xl;
+        }
+        
+        &__content {
+            max-width: none;
+            padding: 55px;
+        }
+    }
+
+    .reservation-form__date {
+        margin-bottom: 30px;
+        font-size: 0;
+    
+        label {
+            display: inline-block;
+            vertical-align: baseline;
+            padding: 0;
+            width: 110px;
+        }
+        
+        input {
+            display: inline-block;
+            vertical-align: baseline;
+            width: 295px;
+        }
+    }
+    
+    .reservation-form__visitors {
+        margin-bottom: 50px;
+    }
+    
+    .reservation-form__number {
+        width: 225px;
+        font-size: 0;
+
+        label {
+            display: inline-block;
+            vertical-align: baseline;
+            padding: 0;
+            width: 110px;
+        }
+        
+        input {
+            display: inline-block;
+            vertical-align: baseline;
+        }
+        
+        &:last-child {
+            label {
+                text-align: center;
+            }
+        }
+    }
+
+}
